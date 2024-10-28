@@ -1,0 +1,174 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="utf-8">
+	<meta http-equiv="X-UA-Compatible" content="IE=edge">
+	<meta name="viewport" content="width=device-width, initial-scale=1">
+	<meta name="description" content="StellerDuos">
+    <title>Steller Duos</title>
+    <link rel="stylesheet" href="css/style.css">
+    <link rel="stylesheet" href="css/bootstrap.min.css">
+    <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.5.0/css/all.css" integrity="sha384-B4dIYHKNBt8Bc12p+WXckhzcICo0wtJAoU8YZTY5qE0Id1GSseTk6S+L3BlXeVIU" crossorigin="anonymous">  
+    <link rel="stylesheet" href="css/aos.css">
+</head>
+<body>
+    
+                     <div class="mt-2">
+                        <div class="container1">
+                            <div class="backbut mx-2">
+                                <a href="upload.html"><img src="./images/back.jpg" alt=""></a>
+                            </div>
+                            <div class="animate five scoregame mt-4">
+                                <span>s</span><span>m</span><span>a</span><span>s</span><span>h</span><span>i</span><span>n</span><span>g</span>  
+                            </div>
+
+                            <div class="animate five scoregame mt-3">
+                                <span>D</span><span>U</span><span>O</span><span>S</span>   
+                            </div>
+                        </div>
+
+                        <div class="container mt-5" data-aos="flip-left" data-aos-easing="ease-out-cubic" data-aos-duration="2000">
+                            <div class="row">
+                              <div class="gamescore">
+
+                                <div class="col-md-12 mt-2">
+                                <div id="slider" class="text-center">  
+                                     <div class="slides">  
+                                      <img src="./images/car-3.jpg" width="100%" />
+                                     </div> 
+                                      
+                                      <div class="slides">  
+                                      <img src="./images/car2.jpg" width="100%" />
+                                    </div>
+                                      
+                                    <div class="slides">  
+                                      <img src="./images/car1.png" width="100%" />
+                                     </div>
+                                      
+                                    <div class="slides">  
+                                      <img src="./images/car-4.jpg" width="100%" />
+                                    </div> 
+                                      
+                                    <div class="slides">  
+                                      <img src="./images/car5.jpg" width="100%" />
+                                    </div>  
+                                      
+                                      <div id="dot"><span class="dot"></span><span class="dot"></span><span class="dot"></span><span class="dot"></span><span class="dot"></span>
+                                      </div>
+                                    </div>
+                                    
+                                </div>
+
+                                <div class="col-md-12">
+                                    <div class="startga">
+                                        <img src="./images/start.png" alt="">
+                                    </div>
+                                </div>
+
+                                <div class="col-md-12">
+                                    <div class="border1">
+                                        <span>
+                                            <h5>Mobile Number :</h5>
+                                            <h5 class="text-white">xxx xxx xxx</h5>
+                                        </span>
+                                        <span>
+                                            <h5>City :</h5>
+                                            <h5 class="text-white">xxx xxx</h5>
+                                        </span>
+                                        <span>
+                                            <h5>Total Points :</h5>
+                                            <h5 class="text-white"> xxx xxx</h5>
+                                        </span>
+                                    </div>
+                                </div>
+                                <div class="col-md-12 mt-3 pb-3">
+                                    <div class="border1">
+                                        <div>
+                                            <img src="./images/pitara.gif" alt="" width="40%">
+                                        </div>
+                                        <h3 class="mt-2"><span>Winning Offers</span></h3>
+
+
+
+                                        <div class="mt-4">
+                                            <div class="sectionn">
+                                                <div class="pointss"><a href="gameacc.html">500 points</a></div>
+                                                <div class="priceee">Rs 10</div>
+                                            </div>
+                                              
+                                              <div class="sectionn">
+                                                <div class="pointss"><a href="gameacc.html">1000 points</a></div>
+                                                <div class="priceee">Rs 30</div>
+                                              </div>
+                                              
+                                              <div class="sectionn">
+                                                <div class="pointss"><a href="gameacc.html">2000 points</a></div>
+                                                <div class="priceee">Rs 100</div>
+                                              </div>
+                                              
+                                              <div class="sectionn">
+                                                <div class="pointss"><a href="gameacc.html">5000 points</a></div>
+                                                <div class="priceee">Rs 300</div>
+                                              </div>
+                                        </div>
+                                    </div>
+                                </div>
+                              </div>
+                            </div>
+                        </div>
+                     </div>
+
+              <div class="area">
+                    <ul class="circles">
+                        <li></li>
+                        <li></li>
+                        <li></li>
+                        <li></li>
+                        <li></li>
+                        <li></li>
+                        <li></li>
+                        <li></li>
+                        <li></li>
+                        <li></li>
+                    </ul>
+              </div>
+
+  <script src="js/bootstrap.bundle.min.js"></script>  
+  <script src="js/aos.js"></script>   
+  <script src="js/jquery_2.1.3_jquery.min.js"></script>
+  <script>
+    var index = 0;
+var slides = document.querySelectorAll(".slides");
+var dot = document.querySelectorAll(".dot");
+
+function changeSlide(){
+
+  if(index<0){
+    index = slides.length-1;
+  }
+  
+  if(index>slides.length-1){
+    index = 0;
+  }
+  
+  for(let i=0;i<slides.length;i++){
+    slides[i].style.display = "none";
+    dot[i].classList.remove("active");
+  }
+  
+  slides[index].style.display= "block";
+  dot[index].classList.add("active");
+  
+  index++;
+  
+  setTimeout(changeSlide,2000);
+  
+}
+
+changeSlide();
+  </script>
+  <script>
+    AOS.init();
+  </script>              
+</body>
+</html>
